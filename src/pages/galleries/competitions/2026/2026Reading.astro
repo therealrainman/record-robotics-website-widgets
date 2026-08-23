@@ -1,4 +1,5 @@
 ---
+import Gallery from "@/components/Gallery.astro";
 import Layout from "@/layouts/Layout.astro";
 
 const images = [
@@ -10,65 +11,5 @@ const images = [
 ---
 
 <Layout title="2026Reading-gallery">
-    <div class="gallery">
-        {
-            images.map((src, index) => (
-                <img
-                    src={src}
-                    alt={`Gallery image ${index + 1}`}
-                    class="gallery-image"
-                    class:list={[{ active: index === 0 }]}
-                />
-            ))
-        }
-    </div>
+    <Gallery images={images} />
 </Layout>
-
-<style is:global>
-    html,
-    body {
-        margin: 0;
-        background: transparent;
-    }
-</style>
-
-<style>
-    .gallery {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        background: transparent;
-    }
-
-    .gallery-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center;
-        opacity: 0;
-        transition: opacity 1.5s ease-in-out;
-    }
-
-    .gallery-image.active {
-        opacity: 1;
-    }
-</style>
-
-<script>
-    const images = document.querySelectorAll(".gallery-image");
-    let currentIndex = 0;
-
-    if (images.length > 1) {
-        setInterval(() => {
-            images[currentIndex].classList.remove("active");
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.add("active");
-        }, 5000);
-    }
-</script>

@@ -1,0 +1,15 @@
+---
+import Gallery from "@/components/Gallery.astro";
+import Layout from "@/layouts/Layout.astro";
+
+const images = [
+    "https://images.squarespace-cdn.com/content/607639d86d7e2d6b1c5ed9df/febaca2d-6c15-4d7d-b665-61c70a11b5c9/488A0091.jpg",
+    "https://images.squarespace-cdn.com/content/607639d86d7e2d6b1c5ed9df/b28de16f-21a9-4041-9dab-47ac2dcb77d5/488A0001.jpg",
+    "https://images.squarespace-cdn.com/content/607639d86d7e2d6b1c5ed9df/fe1840d5-c4bc-4fd9-bfa1-8fd89075eeb0/488A0022.jpg",
+    "https://images.squarespace-cdn.com/content/607639d86d7e2d6b1c5ed9df/e9185d95-94b6-468e-8e9a-b822aa71cc20/IMG_4563.jpg",
+];
+---
+
+<Layout title="2026Reading-gallery">
+    <Gallery images={images} />
+</Layout>

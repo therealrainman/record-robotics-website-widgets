@@ -1,0 +1,15 @@
+---
+import Gallery from "@/components/Gallery.astro";
+import Layout from "@/layouts/Layout.astro";
+
+const images = [
+    "https://images.squarespace-cdn.com/content/607639d86d7e2d6b1c5ed9df/a7ee6b0c-e467-4168-9eff-4ddcec29be94/488A9336.jpg",
+    "https://images.squarespace-cdn.com/content/607639d86d7e2d6b1c5ed9df/928fe495-3e58-4af7-aeae-8f6e9c63c593/brainstorm+6.jpg",
+    "https://images.squarespace-cdn.com/content/607639d86d7e2d6b1c5ed9df/ca60a483-5be7-41cf-8f44-3f26a74fb9e6/getting+game+piece.jpg",
+    "https://images.squarespace-cdn.com/content/607639d86d7e2d6b1c5ed9df/83738648-3527-40b6-a91d-02571325b530/cake+close-up.jpg",
+];
+---
+
+<Layout title="2026Kickoff-gallery">
+    <Gallery images={images} />
+</Layout>

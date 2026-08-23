@@ -2,7 +2,6 @@
 node_modules
 dist
 release
-*lock.yaml
 
 # Editor directories and files
 .vscode/*

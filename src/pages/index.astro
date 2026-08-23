@@ -7,7 +7,15 @@ import Layout from "@/layouts/Layout.astro";
     <p>Embeddable widgets for recordrobotics.org</p>
 
     <ul class="gallery-list">
-        <li><a href="/galleries/competitions/2026/2026Reading">2026Reading Gallery</a></li>
-        <li><a href="/galleries/competitions/2026/2026Kickoff">2026Kickoff Gallery</a></li>
+        <li>
+            <a href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/galleries/competitions/2026/2026Reading`}
+                >2026Reading Gallery</a
+            >
+        </li>
+        <li>
+            <a href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/galleries/competitions/2026/2026Kickoff`}
+                >2026Kickoff Gallery</a
+            >
+        </li>
     </ul>
 </Layout>
